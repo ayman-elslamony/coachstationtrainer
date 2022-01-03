@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ChangeIndex with ChangeNotifier {
-  int index =0;
+  int index =1;
   bool isMain=false;
 
   int _currentTab=0;

@@ -169,7 +169,8 @@
   "the_account_has_been_activated": "تم تفعيل الحساب",
   "please_complete_your_data": "من فضلك قم بإستكمال البيانات الخاصة بك",
   "completing_data": "استكمل البيانات",
-  "add_profile_pictures": "إضافى صور للبروفايل",
+  "completing_data2": "استكمال البيانات",
+  "add_profile_pictures": "اضف صور للبروفايل",
   "add_other_certificates": "إضافة شهادات أخرى",
   "date_of_birth": "تاريخ الميلاد",
   "communication_web_sites": "مواقع التواصل",
@@ -179,7 +180,22 @@
   "time_to": "التوقيت إلى",
   "add_another_place": "إضافة مكان أخر",
   "my_page": "صفحتى",
-  "indebtedness": "المديونية"
+  "indebtedness": "المديونية",
+  "welcome": "مرحبا",
+  "captain": "كابتن",
+  "list_of_classes": "قائمة الحصص",
+"details": "التفاصيل",
+  "timing": "التوقيتات",
+  "training_type": "نوع التدريب",
+  "dues": "مستحقات",
+  "expired_dues": "مستحقات منهية",
+  "total_number_of_orders": "إجمالى عدد الطلبات",
+  "gross_profit": "إجمالى الربح",
+  "delay": "تأجيل",
+  "time": "التوقيت"
+
+
+
 
 
 

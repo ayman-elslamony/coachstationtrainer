@@ -2,6 +2,7 @@ import 'package:coachstationtrainer/Helper/components.dart';
 import 'package:coachstationtrainer/Localization/app_localizations.dart';
 import 'package:coachstationtrainer/provider/changeIndexPage.dart';
 import 'package:coachstationtrainer/screens/SubScreens/ChangeLanguageScreen.dart';
+import 'package:coachstationtrainer/screens/SubScreens/ChangePasswordScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 
@@ -45,11 +46,6 @@ class _MoreScreenState extends State<MoreScreen> {
         physics: BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
-            centerTitle: true,
-            title: Text(
-              '${AppLocalizations.of(context).trans('more')}',
-            ),
-            titleSpacing: 2.0,
           ),
           SliverToBoxAdapter(
               child: Column(
@@ -71,16 +67,17 @@ class _MoreScreenState extends State<MoreScreen> {
                 height: 5.0,
               ),
               Text(
-                'عادل أحمد',
+                'أنس حافظ',
                 style: Theme.of(context).textTheme.headline4,
               ),
               SizedBox(height: 15,),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  InkWell(
+                  Consumer<ChangeIndex>(
+                    builder: (context, changeIndex, child) =>InkWell(
                     onTap: () {
-                      //navigateTo(context, PersonalPageScreen());
+                      changeIndex.changeIndexFunction(2);
                     },
                     child: Container(
                         margin: const EdgeInsets.symmetric(
@@ -108,69 +105,15 @@ class _MoreScreenState extends State<MoreScreen> {
                               text:
                                   '${AppLocalizations.of(context).trans('personal_page')}',
                             ))),
-                  ),
-                  Consumer<ChangeIndex>(
-builder: (context, changeIndex, child) =>(
-                     showMoreInfoCard(
-                      onTap: (){
-                        changeIndex.changeIndexFunction(2);
-                      },
-                        context: context,
-                        imgUrl: 'images/greyCoaches.png',
-                        title:
-                            '${AppLocalizations.of(context).trans('trainer')}'))
-                  ),
-                  showMoreInfoCard(
-                    onTap: (){
-               //       navigateTo(context, VirtualExercise());
-                    },
-                      context: context,
-                      imgUrl: 'images/dumble.png',
-                      title:
-                          '${AppLocalizations.of(context).trans('virtual_exercise')}'),
-                  showMoreInfoCard(
-                    onTap: (){
-                    // navigateTo(context, HomeWorkoutScreen());
-                    },
-                      context: context,
-                      imgUrl: 'images/home.png',
-                      title:
-                          '${AppLocalizations.of(context).trans('home_workout')}'),
-                  showMoreInfoCard(
-                    onTap: (){
-                  //    navigateTo(context, NutritionalProgramsDetailsScreen());
-                    },
-                      context: context,
-                      imgUrl: 'images/food.png',
-                      title:
-                          '${AppLocalizations.of(context).trans('nutritional_programs')}'),
-                  showMoreInfoCard(
-                    onTap: (){
-                     // navigateTo(context, MyProgramScreen());
-                    },
-                      context: context,
-                      imgUrl: 'images/fileSilver.png',
-                      title:
-                          '${AppLocalizations.of(context).trans('my_program')}'),
+                  )),
                   showMoreInfoCard(
                       onTap: (){
-                      //  navigateTo(context, AllTrainingProgramsScreen());
+                       navigateTo(context, ChangePasswordScreen());
                       },
                       context: context,
-                      imgUrl: 'images/fileSilver.png',
+                      imgUrl: 'images/password.png',
                       title:
-                      '${AppLocalizations.of(context).trans('training_programs')}'),
-                  Consumer<ChangeIndex>(
-                      builder: (context, changeIndex, child) =>(
-                          showMoreInfoCard(
-                              onTap: (){
-                                changeIndex.changeIndexFunction(3);
-                              },
-                              context: context,
-                              imgUrl: 'images/heart.png',
-                              title:
-                              '${AppLocalizations.of(context).trans('favourite')}'))
-                  ),
+                      '${AppLocalizations.of(context).trans('change_pass')}'),
                   showMoreInfoCard(
                       context: context,
                       imgUrl: 'images/contact.png',

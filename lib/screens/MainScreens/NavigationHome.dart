@@ -5,23 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:coachstationtrainer/Localization/app_localizations.dart';
 import 'package:provider/provider.dart';
-import 'package:coachstationtrainer/provider/HomeProvider.dart';
 import 'package:coachstationtrainer/provider/changeIndexPage.dart';
-import 'package:coachstationtrainer/provider/locale_provider.dart';
 
-import 'FavouriteScreen.dart';
 import 'HomeScreen.dart';
 import 'MoreScreen.dart';
-import 'ProgramScreen.dart';
-import 'TrainersScreen.dart';
+import 'IndebtednessScreen.dart';
+import 'MyPageScreen.dart';
 
 
-//import 'package:coachstationtrainer/screens/MainScreens/Cart.dart';
-//import 'package:coachstationtrainer/screens/MainScreens/Home.dart';
-//import 'package:coachstationtrainer/provider/CartProvider.dart';
-//import 'package:coachstationtrainer/screens/MainScreens/Alarms.dart';
-//import 'package:coachstationtrainer/screens/MainScreens/MoreScreen.dart';
-//import 'package:coachstationtrainer/screens/MainScreens/Stores.dart';
 
 class NavigationHome extends StatefulWidget {
   static const String routName = '/NavigationHome_Screen';
@@ -34,8 +25,8 @@ class _NavigationHomeState extends State<NavigationHome> {
   List<Widget> mainWidgets = [
 
     HomeScreen(),
-    ProgramScreen(),
-    TrainersScreen(),
+    IndebtednessScreen(),
+    MyPageScreen(),
     MoreScreen(),
   ];
   var _locale;

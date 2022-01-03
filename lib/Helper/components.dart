@@ -13,6 +13,7 @@ final List<String> imgList = [
   'https://www.muscleandfitness.com/wp-content/uploads/2019/11/Young-Muscular-Man-Doing-Lunges-In-Dark-Gym.jpg?w=1109&h=614&crop=1&quality=86&strip=all',
   'https://www.giggsmeat.com/wp-content/uploads/2020/10/4wqKj5zM2a-min.jpg'
 ];
+
 Widget defaultButton({
   double width = double.infinity,
   Color background = defaultColor,
@@ -95,50 +96,50 @@ Widget defaultCard({
               ),
             ),
             Container(
-              height: textSubTitleOne!=null?52:33,
+              height: textSubTitleOne != null ? 52 : 33,
               width: containerTextWidth,
               decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor,
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(10.0),
                       topLeft: Radius.circular(28.0))),
-              child: textSubTitleOne!=null?Column(
-
-                children: [
-                Text(
-                  textTitle,
-                  style: Theme.of(context).textTheme.headline2
-                ),
-                  textSubTitleTwo!=null?Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      textSubTitleOne,
-                        style: Theme.of(context).textTheme.headline1.copyWith(color: Colors.grey[800])
-                    ),
-                    Text(
-                      ' - ',
-                        style: Theme.of(context).textTheme.headline1
-                    ),
-                    Text(
-                      textSubTitleTwo,
-                        style: Theme.of(context).textTheme.headline1.copyWith(color: Colors.grey[800])
-                    ),
-
-                  ],
-                ):Text(
-                    textSubTitleOne,
-                    style: Theme.of(context).textTheme.headline1.copyWith(
-                      height: 1.1,
-                      color: Colors.grey[800]
+              child: textSubTitleOne != null
+                  ? Column(
+                      children: [
+                        Text(textTitle,
+                            style: Theme.of(context).textTheme.headline2),
+                        textSubTitleTwo != null
+                            ? Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(textSubTitleOne,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headline1
+                                          .copyWith(color: Colors.grey[800])),
+                                  Text(' - ',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headline1),
+                                  Text(textSubTitleTwo,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headline1
+                                          .copyWith(color: Colors.grey[800])),
+                                ],
+                              )
+                            : Text(textSubTitleOne,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headline1
+                                    .copyWith(
+                                        height: 1.1, color: Colors.grey[800])),
+                      ],
                     )
-                  ),
-              ],):Center(
-            child: Text(
-              textTitle,
-              style: Theme.of(context).textTheme.bodyText1
-            ),
-    ),
+                  : Center(
+                      child: Text(textTitle,
+                          style: Theme.of(context).textTheme.bodyText1),
+                    ),
             ),
           ],
         ),
@@ -166,13 +167,13 @@ Widget defaultLocationWithIcon(
     ),
   );
 }
-Widget subtitleOfHomeScreen({
-  Function function,
-  BuildContext context,
-  String textKey,
-  bool isHomeScreen=false,
-  bool isEnableSpaceBeforeArrow=false
-}) {
+
+Widget subtitleOfHomeScreen(
+    {Function function,
+    BuildContext context,
+    String textKey,
+    bool isHomeScreen = false,
+    bool isEnableSpaceBeforeArrow = false}) {
   return InkWell(
     onTap: function,
     child: Row(
@@ -181,18 +182,18 @@ Widget subtitleOfHomeScreen({
           '${AppLocalizations.of(context).trans(textKey)}',
           style: Theme.of(context).textTheme.headline4,
         ),
-  isEnableSpaceBeforeArrow ==true? Spacer():SizedBox()
-,
-  Icon(
+        isEnableSpaceBeforeArrow == true ? Spacer() : SizedBox(),
+        Icon(
           Icons.arrow_forward_ios,
           size: 18.0,
-    color: isHomeScreen==true?Colors.grey[800]:Colors.grey[300],
+          color: isHomeScreen == true ? Colors.grey[800] : Colors.grey[300],
         ),
-        isEnableSpaceBeforeArrow ==false? Spacer():SizedBox()
+        isEnableSpaceBeforeArrow == false ? Spacer() : SizedBox()
       ],
     ),
   );
 }
+
 Widget defaultArticle({
   @required Function function,
   @required BuildContext context,
@@ -238,18 +239,14 @@ Widget defaultArticle({
                     )),
                 child: ListTile(
                   contentPadding: const EdgeInsets.symmetric(horizontal: 6.0),
-                  title: Text(
-                    textTitle,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.headline2
-                  ),
-                  subtitle: Text(
-                    textSubTitle,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.subtitle2
-                  ),
+                  title: Text(textTitle,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.headline2),
+                  subtitle: Text(textSubTitle,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.subtitle2),
                 ),
               )
             ],
@@ -268,38 +265,44 @@ Widget defaultTextButton({
         overlayColor: MaterialStateProperty.all(Colors.transparent),
       ),
       onPressed: function,
-      child: Text(
-        '${AppLocalizations.of(context).trans(textKey)}',
-        style:Theme.of(context).textTheme.headline3.copyWith(
-          color: defaultColor
-        )
-      ),
+      child: Text('${AppLocalizations.of(context).trans(textKey)}',
+          style: Theme.of(context)
+              .textTheme
+              .headline3
+              .copyWith(color: defaultColor)),
     );
 
 Widget defaultSubtitleTextOne(
         {@required BuildContext context, @required String text, Color color}) =>
-    Text(
-      text,
-      style: Theme.of(context).textTheme.bodyText1.copyWith(
-        color: color??Colors.grey[800]
-      )
-    );
+    Text(text,
+        style: Theme.of(context)
+            .textTheme
+            .bodyText1
+            .copyWith(color: color ?? Colors.grey[800]));
+
 Widget showTextWithIcon(
-    {@required BuildContext context, String iconUrl, String titleText}) {
+    {@required BuildContext context,
+    String iconUrl,
+    String titleText,
+    Color colorOfWidget = Colors.red}) {
   return Row(
     children: [
       ImageIcon(
         AssetImage(iconUrl),
         size: 15,
-        color: Colors.red,
+        color: colorOfWidget,
       ),
       SizedBox(
         width: 5.0,
       ),
-      defaultSubtitleTextTwo(context: context, text: titleText),
+      defaultSubtitleTextTwo(
+          context: context,
+          text: titleText,
+          textColor: colorOfWidget != Colors.red ? colorOfWidget : null),
     ],
   );
 }
+
 Widget showAvilableTimeInOneDay(
     {BuildContext context, String dayName, String startTime, String endTime}) {
   return Padding(
@@ -318,29 +321,31 @@ Widget showAvilableTimeInOneDay(
                   text: dayName ?? 'الأحد',
                   textColor: Colors.white)),
         ),
-        SizedBox(height: 8.0,),
+        SizedBox(
+          height: 8.0,
+        ),
         defaultShowTime(context: context, textTime: startTime ?? 'من 30 10 ص'),
         defaultShowTime(context: context, textTime: endTime ?? 'إلى 50 11 ص'),
       ],
     ),
   );
 }
+
 Widget defaultSubtitleTextTwo(
         {@required BuildContext context,
         @required String text,
         Color textColor}) =>
-    Text(
-      text,
-      style: Theme.of(context).textTheme.headline1.copyWith(
-        height: 1.5,
-        color: textColor ?? Colors.grey[700],
-      )
-    );
-Widget defaultTrainerCard({BuildContext context,Function onTap}) {
+    Text(text,
+        style: Theme.of(context).textTheme.headline1.copyWith(
+              height: 1.5,
+              color: textColor ?? Colors.grey[700],
+            ));
+
+Widget defaultTrainerCard({BuildContext context, Function onTap}) {
   return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(bottom:  11.0,left: 0.0,right: 0.0),
+        padding: const EdgeInsets.only(bottom: 11.0, left: 0.0, right: 0.0),
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
           decoration: BoxDecoration(
@@ -392,7 +397,9 @@ Widget defaultTrainerCard({BuildContext context,Function onTap}) {
                     ),
                     defaultSubtitleTextTwo(
                         context: context, text: 'اللياقة والعلاج الطبيعى'),
-                    const SizedBox(height: 4.0,),
+                    const SizedBox(
+                      height: 4.0,
+                    ),
                     Row(
                       children: [
                         RatingBar.builder(
@@ -413,9 +420,7 @@ Widget defaultTrainerCard({BuildContext context,Function onTap}) {
                         ),
                         Spacer(),
                         defaultLocationWithIcon(
-                            context: context,
-                            textLocation: 'الرياض'
-                        )
+                            context: context, textLocation: 'الرياض')
                       ],
                     )
                   ],
@@ -424,14 +429,14 @@ Widget defaultTrainerCard({BuildContext context,Function onTap}) {
             ],
           ),
         ),
-      )
-  );
+      ));
 }
 
-
-
-
-Widget bottomNavigationBar({@required BuildContext context,@required Size media,@required int currentIndex,@required Function onTap}){
+Widget bottomNavigationBar(
+    {@required BuildContext context,
+    @required Size media,
+    @required int currentIndex,
+    @required Function onTap}) {
   return Container(
     decoration: BoxDecoration(
       color: Colors.white,
@@ -471,11 +476,9 @@ Widget bottomNavigationBar({@required BuildContext context,@required Size media,
                   size: media.width * 0.06,
                 ),
               ),
-              title: Text(
-                  AppLocalizations.of(context).trans("home"),
+              title: Text(AppLocalizations.of(context).trans("home"),
                   style: TextStyle(
-                      fontSize: media.width * 0.028,
-                      fontFamily: 'Net'))),
+                      fontSize: media.width * 0.028, fontFamily: 'Net'))),
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(bottom: 4),
@@ -491,11 +494,9 @@ Widget bottomNavigationBar({@required BuildContext context,@required Size media,
                   size: media.width * 0.06,
                 ),
               ),
-              title: Text(
-                  AppLocalizations.of(context).trans("program"),
+              title: Text(AppLocalizations.of(context).trans("program"),
                   style: TextStyle(
-                      fontSize: media.width * 0.028,
-                      fontFamily: 'Net'))),
+                      fontSize: media.width * 0.028, fontFamily: 'Net'))),
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(bottom: 4),
@@ -511,11 +512,9 @@ Widget bottomNavigationBar({@required BuildContext context,@required Size media,
                   size: media.width * 0.06,
                 ),
               ),
-              title: Text(
-                  AppLocalizations.of(context).trans("trainer"),
+              title: Text(AppLocalizations.of(context).trans("trainer"),
                   style: TextStyle(
-                      fontSize: media.width * 0.028,
-                      fontFamily: 'Net'))),
+                      fontSize: media.width * 0.028, fontFamily: 'Net'))),
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(bottom: 4),
@@ -532,11 +531,9 @@ Widget bottomNavigationBar({@required BuildContext context,@required Size media,
                   color: Theme.of(context).primaryColor,
                 ),
               ),
-              title: Text(
-                  AppLocalizations.of(context).trans("favourite"),
+              title: Text(AppLocalizations.of(context).trans("favourite"),
                   style: TextStyle(
-                      fontSize: media.width * 0.028,
-                      fontFamily: 'Net'))),
+                      fontSize: media.width * 0.028, fontFamily: 'Net'))),
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(bottom: 4),
@@ -552,11 +549,9 @@ Widget bottomNavigationBar({@required BuildContext context,@required Size media,
                   size: media.width * 0.06,
                 ),
               ),
-              title: Text(
-                  AppLocalizations.of(context).trans("more"),
+              title: Text(AppLocalizations.of(context).trans("more"),
                   style: TextStyle(
-                      fontSize: media.width * 0.028,
-                      fontFamily: 'Net'))),
+                      fontSize: media.width * 0.028, fontFamily: 'Net'))),
         ],
         unselectedItemColor: Colors.grey,
         selectedItemColor: Theme.of(context).primaryColor,
@@ -565,17 +560,12 @@ Widget bottomNavigationBar({@required BuildContext context,@required Size media,
         onTap: onTap,
         type: BottomNavigationBarType.fixed,
         selectedIconTheme: IconThemeData(size: 25),
-        unselectedIconTheme:
-        IconThemeData(color: Colors.black45, size: 25),
+        unselectedIconTheme: IconThemeData(color: Colors.black45, size: 25),
         // selectedItemColor: Theme.of(context).primaryColor,
         selectedLabelStyle: TextStyle(
-            fontWeight: FontWeight.w800,
-            fontSize: 12,
-            fontFamily: 'Net'),
+            fontWeight: FontWeight.w800, fontSize: 12, fontFamily: 'Net'),
         unselectedLabelStyle: TextStyle(
-            fontWeight: FontWeight.w800,
-            fontSize: 12,
-            fontFamily: 'Net'),
+            fontWeight: FontWeight.w800, fontSize: 12, fontFamily: 'Net'),
       ),
     ),
   );
@@ -599,18 +589,6 @@ Widget bottomNavigationBar({@required BuildContext context,@required Size media,
 //),
 //),
 
-
-
-
-
-
-
-
-
-
-
-
-
 Widget defaultFormField({
   TextEditingController controller,
   @required TextInputType type,
@@ -622,13 +600,15 @@ Widget defaultFormField({
   String label,
   IconData prefix,
   IconData suffix,
+  Color suffixColor,
   Function suffixPressed,
   bool isClickable = true,
+  bool readOnly = false,
 }) =>
     SizedBox(
       height: 55.0,
       child: InkWell(
-        onTap: isClickable==false?onTap:null,
+        onTap: isClickable == false ? onTap : null,
         child: TextFormField(
           controller: controller,
           keyboardType: type,
@@ -636,23 +616,23 @@ Widget defaultFormField({
           enabled: isClickable,
           onFieldSubmitted: onSubmit,
           onChanged: onChange,
-          onTap: onTap??(){},
+          onTap: onTap ?? () {},
           validator: validate,
           cursorColor: defaultColor,
           decoration: InputDecoration(
             labelText: label,
-            prefixIcon: prefix != null ? Icon(
-              prefix,
-            ) : null ,
-            labelStyle: TextStyle(
-              color: Colors.grey[600],
-              fontSize: 15
-            ),
+            prefixIcon: prefix != null
+                ? Icon(
+                    prefix,
+                  )
+                : null,
+            labelStyle: TextStyle(color: Colors.grey[600], fontSize: 15),
             suffixIcon: suffix != null
                 ? IconButton(
                     onPressed: suffixPressed,
                     icon: Icon(
                       suffix,
+                      color: suffixColor,
                     ),
                   )
                 : null,
@@ -664,11 +644,13 @@ Widget defaultFormField({
             disabledBorder: textFormFieldBorder,
             errorBorder: textFormFieldBorder,
             errorStyle: TextStyle(color: defaultColor),
-            contentPadding: EdgeInsets.only(bottom: 10,right: 15,left: 15),
+            contentPadding: EdgeInsets.only(bottom: 10, right: 15, left: 15),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
                 borderSide: BorderSide(color: Colors.grey[300])),
+            suffixIconColor: defaultColor,
           ),
+          readOnly: readOnly,
         ),
       ),
     );
@@ -679,28 +661,32 @@ OutlineInputBorder textFormFieldBorder = OutlineInputBorder(
 Widget defaultAppBar(
         {@required BuildContext context,
         String titleKey,
-          bool enableLeading=true,
-          bool isTextNotKey=false,
-          bool automaticallyImplyLeading =true,
+        bool enableLeading = true,
+        bool isTextNotKey = false,
+        bool automaticallyImplyLeading = true,
         List<Widget> actions,
         Function onClickedBackButton}) =>
     AppBar(
       automaticallyImplyLeading: automaticallyImplyLeading,
-      leading: enableLeading==true?IconButton(
-          onPressed: onClickedBackButton == null
-              ? () {
-                  Navigator.pop(context);
-                }
-              : onClickedBackButton,
-          icon: const ImageIcon(
-            AssetImage(
-              'images/arrowLeft.png',
-            ),
-            size: 16,
-          )):null,
+      leading: enableLeading == true
+          ? IconButton(
+              onPressed: onClickedBackButton == null
+                  ? () {
+                      Navigator.pop(context);
+                    }
+                  : onClickedBackButton,
+              icon: const ImageIcon(
+                AssetImage(
+                  'images/arrowLeft.png',
+                ),
+                size: 16,
+              ))
+          : null,
       centerTitle: !enableLeading,
       title: Text(
-          isTextNotKey?titleKey:'${AppLocalizations.of(context).trans(titleKey)}',
+        isTextNotKey
+            ? titleKey
+            : '${AppLocalizations.of(context).trans(titleKey)}',
       ),
       titleSpacing: 2.0,
       actions: actions,

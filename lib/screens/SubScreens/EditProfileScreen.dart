@@ -14,7 +14,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   void initState() {
     super.initState();
-    nameController.text = 'أحمد عادل';
+    nameController.text = 'أنس حافظ';
     phoneController.text = '01234567891';
   }
 
