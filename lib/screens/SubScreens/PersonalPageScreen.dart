@@ -95,24 +95,6 @@ class _PersonalPageScreenState extends State<PersonalPageScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: Consumer<ChangeIndex>(
-        builder: (context, changeIndex, child) =>bottomNavigationBar(
-            context: context,
-            onTap: (index){
-              setState(() {
-                changeIndex.index=index;
-              });
-              Navigator.pushAndRemoveUntil(context, PageRouteBuilder(
-                pageBuilder:
-                    (context, animation1, animation2) =>
-                    NavigationHome(),
-                transitionDuration: Duration(seconds: 0),
-              ),(Route<dynamic> route) => false);
-            },
-            media: media,
-            currentIndex: changeIndex.index
-        ),
-      ),
     );
   }
 }

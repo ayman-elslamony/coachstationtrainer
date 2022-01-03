@@ -476,9 +476,11 @@ Widget bottomNavigationBar(
                   size: media.width * 0.06,
                 ),
               ),
-              title: Text(AppLocalizations.of(context).trans("home"),
+              title: Text(
+                  AppLocalizations.of(context).trans("home"),
                   style: TextStyle(
-                      fontSize: media.width * 0.028, fontFamily: 'Net'))),
+                      fontSize: media.width * 0.028,
+                      fontFamily: 'Net'))),
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(bottom: 4),
@@ -494,9 +496,11 @@ Widget bottomNavigationBar(
                   size: media.width * 0.06,
                 ),
               ),
-              title: Text(AppLocalizations.of(context).trans("program"),
+              title: Text(
+                  AppLocalizations.of(context).trans("indebtedness"),
                   style: TextStyle(
-                      fontSize: media.width * 0.028, fontFamily: 'Net'))),
+                      fontSize: media.width * 0.028,
+                      fontFamily: 'Net'))),
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(bottom: 4),
@@ -512,28 +516,11 @@ Widget bottomNavigationBar(
                   size: media.width * 0.06,
                 ),
               ),
-              title: Text(AppLocalizations.of(context).trans("trainer"),
+              title: Text(
+                  AppLocalizations.of(context).trans("my_page"),
                   style: TextStyle(
-                      fontSize: media.width * 0.028, fontFamily: 'Net'))),
-          BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.only(bottom: 4),
-                child: ImageIcon(
-                  AssetImage('images/heart.png'),
-                  size: media.width * 0.06,
-                ),
-              ),
-              activeIcon: Padding(
-                padding: const EdgeInsets.only(bottom: 4),
-                child: ImageIcon(
-                  AssetImage('images/heart.png'),
-                  size: media.width * 0.06,
-                  color: Theme.of(context).primaryColor,
-                ),
-              ),
-              title: Text(AppLocalizations.of(context).trans("favourite"),
-                  style: TextStyle(
-                      fontSize: media.width * 0.028, fontFamily: 'Net'))),
+                      fontSize: media.width * 0.028,
+                      fontFamily: 'Net'))),
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(bottom: 4),
@@ -549,9 +536,11 @@ Widget bottomNavigationBar(
                   size: media.width * 0.06,
                 ),
               ),
-              title: Text(AppLocalizations.of(context).trans("more"),
+              title: Text(
+                  AppLocalizations.of(context).trans("more"),
                   style: TextStyle(
-                      fontSize: media.width * 0.028, fontFamily: 'Net'))),
+                      fontSize: media.width * 0.028,
+                      fontFamily: 'Net'))),
         ],
         unselectedItemColor: Colors.grey,
         selectedItemColor: Theme.of(context).primaryColor,

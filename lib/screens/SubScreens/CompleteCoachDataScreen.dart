@@ -468,7 +468,7 @@ class _CompleteCoachDataScreenStepOneState extends State<CompleteCoachDataScreen
                   controller: birthDateController,
                   isClickable: true,
                   readOnly: true,
-                  suffix: Icons.calendar_view_month,
+                  suffix: Icons.calendar_today,
                   type: TextInputType.datetime,
                   validate: (val) {
                     if (val == null || val.isEmpty) {
