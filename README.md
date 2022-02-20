@@ -1,17 +1,53 @@
-# coachstationtrainer
+# Coach Station Trainer (Flutter Application)
 
-sports App
+It is a sports application that allows the Trainers to view the list of classes and financial dues.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+* allow trainers to view list of classes with more detials.
+* view current and expired financial dues
+* view profile with the ability to:
+  * view the training places.
+  * view certificates.
+* update profile.
+* possibility to change the language.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+#### Code Quality
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# coachstationtrainer" 
+* Write readable and reusable code.
+* Use single responsibility for the classes and functions.
+* Work with models.
+* Easy to modify user interface.
+
+
+## Screenshots
+<p>
+<img src="screenshoots/mobile-white.png" alt="Coach Station Trainer" width="180">
+&nbsp;
+<img src="screenshoots/mobile-white (1).png" alt="Coach Station Trainer" width="180">
+&nbsp;
+<img src="screenshoots/mobile-white (2).png" alt="Coach Station Trainer" width="180">
+&nbsp;
+<img src="screenshoots/mobile-white (3).png" alt="Coach Station Trainer" width="180">
+&nbsp;
+<img src="screenshoots/mobile-white (4).png" alt="Coach Station Trainer" width="180">
+&nbsp;
+<img src="screenshoots/mobile-white (5).png" alt="Coach Station Trainer" width="180">
+</p>
+
+#### Dependencies:
+- flutter_localizations
+- provider
+- webview_flutter
+- firebase_messaging
+- firebase_core
+- shared_preferences
+- dio
+- pull_to_refresh
+- flutter_launcher_icons
+
+
+# What's Next?
+ - [X] Add backend.
+ - [ ] Testing App.
