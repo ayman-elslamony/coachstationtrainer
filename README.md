@@ -2,7 +2,9 @@
 
 It is a sports application that allows the Trainers to view the list of classes and financial dues.
 
-
+### For using app:
+ [download android apk](https://drive.google.com/file/d/1GNoUkoJ0n6etuHFU4_9rurBlm01ofv9R/view?usp=sharing)
+ 
 ## Features
 
 * allow trainers to view list of classes with more detials.
